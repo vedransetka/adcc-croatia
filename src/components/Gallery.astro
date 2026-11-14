@@ -1,0 +1,74 @@
+---
+import { gallery, links } from '../data/site';
+---
+
+<section id="gallery" class="section gallery-section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-tag" style="color: var(--accent-gold);">Foto Arhiva</div>
+        <h2 class="section-title">TRENUCI SA STRUNJAČE</h2>
+      </div>
+      <a href={links.pixieset} target="_blank" rel="noopener" class="btn-secondary">
+        Cijela Pixieset Galerija ↗
+      </a>
+    </div>
+
+    <div class="gallery-grid">
+      {gallery.map((photo) => (
+        <a
+          href={links.pixieset}
+          target="_blank"
+          rel="noopener"
+          class="gallery-item"
+          aria-label={`${photo.alt} — otvori galeriju`}
+        >
+          <img
+            src={photo.src}
+            alt={photo.alt}
+            class="gallery-img"
+            width="330"
+            height="260"
+            loading="lazy"
+          />
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .gallery-section {
+    background: var(--bg-elevated);
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .gallery-item {
+    border-radius: 10px;
+    overflow: hidden;
+    height: 260px;
+    display: block;
+  }
+  .gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+  .gallery-item:hover .gallery-img {
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 900px) {
+    .gallery-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    .gallery-item {
+      height: 180px;
+    }
+  }
+</style>

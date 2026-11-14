@@ -1,0 +1,179 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { divisions, links } from '../data/site';
+
+const title = 'ADCC Pravila, Divizije & Bodovanje – ADCC Croatia';
+const description =
+  'Službeni ADCC propisi: format meča, sustav bodovanja, kazne i službene težinske ' +
+  'kategorije za submission grappling natjecanja u organizaciji ADCC Croatia.';
+---
+
+<Layout title={title} description={description}>
+  <Header />
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-tag">Službeni Propisi &amp; Informacije</div>
+        <h1 class="page-title">ADCC PRAVILA, DIVIZIJE &amp; BODOVANJE</h1>
+        <p class="page-sub">
+          Najviši standardi sigurnosti, fer-pleja i tehničke preciznosti u svijetu
+          submission grapplinga.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid-2">
+        <article class="rule-card">
+          <h2 class="rule-title">⏱️ Format Meča &amp; Bodovanje</h2>
+          <p class="rule-point">
+            <strong>Prvi dio meča:</strong> Prva polovica meča odvija se bez bodova
+            (samo submisije). Borci mogu slobodno napadati bez straha od negativnih
+            bodova za guard pull ili rušenja.
+          </p>
+          <p class="rule-point">
+            <strong>Drugi dio meča:</strong> Uključuje se bodovanje (Takedown:
+            2–4 boda, Guard Pass: 3 boda, Mount/Back Mount: 4 boda, Knee on Belly:
+            2 boda).
+          </p>
+          <p class="rule-point">
+            <strong>Kazne (Penali):</strong> Pasivnost, izbjegavanje borbe ili
+            povlačenje u guard u bodovanom dijelu meča kažnjava se negativnim
+            bodom (−1).
+          </p>
+        </article>
+
+        <article class="rule-card">
+          <h2 class="rule-title">⚖️ Službene Težinske Kategorije (Muški Pro)</h2>
+          <p class="rule-point">
+            Sva službena vaganja obavljaju se neposredno prije prvog meča bez
+            kimona (No-Gi oprema).
+          </p>
+          <table class="division-table">
+            <thead>
+              <tr>
+                <th>Kategorija</th>
+                <th>Težina (Limit)</th>
+                <th>Format Borbe</th>
+              </tr>
+            </thead>
+            <tbody>
+              {divisions.map((d) => (
+                <tr>
+                  <td>{d.category}</td>
+                  <td>{d.limit}</td>
+                  <td>{d.format}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </article>
+      </div>
+
+      <div class="container rules-cta">
+        <a href={links.adcombat} target="_blank" rel="noopener" class="btn-secondary">
+          Kompletna ADCC Pravila (ADCombat) ↗
+        </a>
+        <a href={links.smoothcomp} target="_blank" rel="noopener" class="btn-primary">
+          Prijava na Turnir
+        </a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .page-hero {
+    padding-block: 80px 60px;
+    background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg-dark) 100%);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .page-tag {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+  .page-title {
+    font-size: 48px;
+    font-weight: 900;
+    margin-bottom: 16px;
+    line-height: 1.1;
+  }
+  .page-sub {
+    font-size: 18px;
+    color: var(--text-muted);
+    max-width: 640px;
+    line-height: 1.6;
+  }
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+  .rule-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius);
+    padding: 32px;
+  }
+  .rule-title {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .rule-point {
+    margin-bottom: 16px;
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+  .rule-point strong {
+    color: #fff;
+  }
+  .division-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 24px;
+  }
+  .division-table th,
+  .division-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-subtle);
+    font-size: 14px;
+  }
+  .division-table th {
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--primary-color);
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  .rules-cta {
+    display: flex;
+    gap: 16px;
+    margin-top: 48px;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 900px) {
+    .page-title {
+      font-size: 32px;
+    }
+    .grid-2 {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    .rule-card {
+      padding: 24px;
+    }
+  }
+</style>

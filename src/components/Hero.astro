@@ -1,0 +1,146 @@
+---
+import { heroStats, links } from '../data/site';
+---
+
+<section class="hero" id="about">
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <span class="hero-badge">Službeni Nacionalni Savez</span>
+      <h1 class="hero-h1">
+        VRHUNAC HRVATSKOG <span>SUBMISSION</span> FIGHTINGA
+      </h1>
+      <p class="hero-desc">
+        Službeno predstavništvo najprestižnije svjetske grappling organizacije u
+        Hrvatskoj. Organiziramo nacionalna prvenstva, otvorene kupove i pripremamo
+        borce za međunarodnu ADCC scenu.
+      </p>
+      <div class="hero-buttons">
+        <a href="/#tournaments" class="btn-primary">Pregledaj Turnire 2026</a>
+        <a href="/pravila" class="btn-secondary">ADCC Pravila &amp; Kriteriji</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-card">
+        <img
+          src="/images/5db9902a-14d2-4a24-b62f-5de7a5d9116e.jpg"
+          alt="ADCC Croatia prvenstvo — borci na strunjači"
+          class="hero-img"
+          width="620"
+          height="380"
+          fetchpriority="high"
+        />
+        <div class="hero-card-body">
+          {heroStats.map((stat) => (
+            <div class="hero-stat">
+              <div class="hero-stat-num">{stat.num}</div>
+              <div class="hero-stat-label">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    padding-block: 110px 90px;
+    background:
+      linear-gradient(180deg, rgba(19, 23, 34, 0.6) 0%, rgba(10, 12, 16, 1) 100%),
+      radial-gradient(circle at 80% 20%, rgba(225, 6, 0, 0.15) 0%, transparent 60%);
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    background: rgba(225, 6, 0, 0.15);
+    border: 1px solid rgba(225, 6, 0, 0.4);
+    color: #ff4d4d;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 24px;
+  }
+  .hero-h1 {
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 1.08;
+    letter-spacing: -1px;
+    margin-bottom: 24px;
+  }
+  .hero-h1 span {
+    color: var(--primary-color);
+  }
+  .hero-desc {
+    font-size: 18px;
+    color: var(--text-muted);
+    max-width: 580px;
+    margin-bottom: 40px;
+    line-height: 1.6;
+  }
+  .hero-buttons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .hero-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+  }
+  .hero-img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+  }
+  .hero-card-body {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .hero-stat-num {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--accent-gold);
+  }
+  .hero-stat-label {
+    font-size: 12px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 900px) {
+    .hero {
+      padding-block: 56px 48px;
+    }
+    .hero-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    .hero-h1 {
+      font-size: 38px;
+    }
+    .hero-desc {
+      font-size: 16px;
+      margin-bottom: 28px;
+    }
+    .hero-img {
+      height: 280px;
+    }
+  }
+</style>

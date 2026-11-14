@@ -1,0 +1,64 @@
+---
+import { affiliates } from '../data/site';
+---
+
+<section class="affiliates-section">
+  <div class="container">
+    <div class="section-tag" style="text-align: center;">Povezane Organizacije &amp; Portali</div>
+    <h3 class="affiliates-title">SLUŽBENI KANALI &amp; PARTNERI</h3>
+    <div class="affiliates-grid">
+      {affiliates.map((item) => (
+        <a href={item.href} target="_blank" rel="noopener" class="affiliate-badge">
+          {item.label}
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .affiliates-section {
+    padding-block: 80px;
+    border-top: 1px solid var(--border-subtle);
+    text-align: center;
+  }
+  .affiliates-title {
+    font-size: 24px;
+    font-weight: 800;
+    margin-top: 8px;
+    margin-bottom: 32px;
+  }
+  .affiliates-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  .affiliate-badge {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    padding: 20px 36px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    transition: border-color 0.2s, transform 0.15s;
+  }
+  .affiliate-badge:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 900px) {
+    .affiliates-section {
+      padding-block: 48px;
+    }
+    .affiliates-grid {
+      gap: 16px;
+    }
+    .affiliate-badge {
+      padding: 16px 24px;
+      font-size: 14px;
+    }
+  }
+</style>
