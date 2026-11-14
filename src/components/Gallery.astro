@@ -27,6 +27,7 @@ import { gallery, links } from '../data/site';
             src={photo.src}
             alt={photo.alt}
             class="gallery-img"
+            style={photo.position ? `object-position: ${photo.position};` : undefined}
             width="330"
             height="260"
             loading="lazy"
@@ -56,6 +57,7 @@ import { gallery, links } from '../data/site';
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top center;
     transition: transform 0.3s;
   }
   .gallery-item:hover .gallery-img {

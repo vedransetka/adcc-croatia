@@ -32,17 +32,14 @@
     .brand {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 14px;
     }
-    .brand-badge {
-      background: var(--primary-color);
-      color: #fff;
-      font-weight: 900;
-      font-size: 20px;
-      letter-spacing: 2px;
-      padding: 8px 16px;
-      border-radius: 6px;
-      text-transform: uppercase;
+    .brand-logo {
+      height: 44px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+      filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
     }
     .brand-title {
       font-size: 20px;
@@ -160,6 +157,7 @@
       width: 100%;
       height: 380px;
       object-fit: cover;
+      object-position: center 38%;
       display: block;
     }
     .hero-card-body {
@@ -323,6 +321,7 @@
       width: 100%;
       height: 220px;
       object-fit: cover;
+      object-position: top center;
       display: block;
     }
     .event-card-body {
@@ -376,6 +375,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: top center;
       transition: transform 0.3s;
     }
     .gallery-img:hover {
@@ -457,7 +457,7 @@
   <!-- Navigation -->
   <header class="header" data-dc-id="header">
     <div class="brand" data-dc-id="header-brand">
-      <div class="brand-badge" data-dc-id="brand-badge">ADCC</div>
+      <img src="/images/adcc-retina-logo.png" alt="ADCC" class="brand-logo" data-dc-id="brand-logo" />
       <div>
         <div class="brand-title" data-dc-id="brand-title">CROATIA</div>
         <div class="brand-sub" data-dc-id="brand-sub">Submission Fighting</div>
@@ -621,7 +621,7 @@
     <div class="footer-grid">
       <div class="footer-col" data-dc-id="footer-col-1">
         <div class="brand" style="margin-bottom: 16px;">
-          <div class="brand-badge">ADCC</div>
+          <img src="/images/adcc-retina-logo.png" alt="ADCC" class="brand-logo" />
           <div class="brand-title">CROATIA</div>
         </div>
         <p style="color: var(--text-muted); font-size: 14px; max-width: 320px; line-height: 1.6;">

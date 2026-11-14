@@ -29,14 +29,11 @@
       top: 0;
       z-index: 100;
     }
-    .m-brand-badge {
-      background: var(--primary-color);
-      color: #fff;
-      font-weight: 900;
-      font-size: 14px;
-      padding: 6px 12px;
-      border-radius: 4px;
-      letter-spacing: 1px;
+    .m-brand-logo {
+      height: 32px;
+      width: auto;
+      object-fit: contain;
+      display: block;
     }
     .m-brand-name {
       font-weight: 800;
@@ -136,6 +133,7 @@
       width: 100%;
       height: 380px;
       object-fit: cover;
+      object-position: top center;
       display: block;
     }
     .m-champ-body {
@@ -165,6 +163,7 @@
       width: 100%;
       height: 180px;
       object-fit: cover;
+      object-position: top center;
       display: block;
     }
     .m-event-body {
@@ -216,7 +215,7 @@
 
   <header class="m-header" data-dc-id="m-header">
     <div style="display: flex; align-items: center; gap: 10px;" data-dc-id="m-brand">
-      <div class="m-brand-badge" data-dc-id="m-brand-badge">ADCC</div>
+      <img src="/images/adcc-retina-logo.png" alt="ADCC" class="m-brand-logo" data-dc-id="m-brand-logo" />
       <div class="m-brand-name" data-dc-id="m-brand-name">CROATIA</div>
     </div>
     <button class="m-menu-btn" data-dc-id="m-menu-btn">IZBORNIK</button>

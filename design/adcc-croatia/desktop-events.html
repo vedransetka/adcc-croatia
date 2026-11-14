@@ -25,15 +25,13 @@
       background: rgba(10, 12, 16, 0.95);
       border-bottom: 1px solid var(--border-subtle);
     }
-    .brand { display: flex; align-items: center; gap: 16px; }
-    .brand-badge {
-      background: var(--primary-color);
-      color: #fff;
-      font-weight: 900;
-      font-size: 20px;
-      letter-spacing: 2px;
-      padding: 8px 16px;
-      border-radius: 6px;
+    .brand { display: flex; align-items: center; gap: 14px; }
+    .brand-logo {
+      height: 44px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+      filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
     }
     .brand-title { font-size: 20px; font-weight: 800; letter-spacing: 1px; }
 
@@ -125,7 +123,7 @@
 
   <header class="header" data-dc-id="ev-header">
     <div class="brand" data-dc-id="ev-brand">
-      <div class="brand-badge" data-dc-id="ev-brand-badge">ADCC</div>
+      <img src="/images/adcc-retina-logo.png" alt="ADCC" class="brand-logo" data-dc-id="ev-brand-logo" />
       <div class="brand-title" data-dc-id="ev-brand-title">CROATIA</div>
     </div>
     <div style="font-weight: 700; font-size: 14px;">

@@ -62,6 +62,7 @@ export type EventItem = {
   title: string;
   location: string;
   image: string;
+  position?: string;
   cta: { label: string; href: string };
 };
 
@@ -71,6 +72,7 @@ export const events: EventItem[] = [
     title: 'ADCC Zadar Open 2026',
     location: 'ŠC Višnjik, Dvorana Krešimir Ćosić, Zadar',
     image: '/images/b3893ab6-0bc2-47ae-b481-7784d96a6441.jpg',
+    position: 'center center',
     cta: { label: 'Otvorene Prijave & Ždrijeb', href: links.smoothcomp },
   },
   {
@@ -78,6 +80,7 @@ export const events: EventItem[] = [
     title: 'ADCC Prvenstvo Hrvatske',
     location: 'Dom Sportova, Zagreb',
     image: '/images/e486d98b-5386-4643-b1c8-3f628a6573b0.jpg',
+    position: 'center 45%',
     cta: { label: 'Službeni Detalji', href: links.smoothcomp },
   },
   {
@@ -85,19 +88,58 @@ export const events: EventItem[] = [
     title: 'ADCC European Trials',
     location: 'Kvalifikacije za Svjetsko Prvenstvo',
     image: '/images/1bd918d6-26ec-45a8-91bb-0867c27d6647.jpg',
+    position: 'center 15%',
     cta: { label: 'Pravila & Kriteriji', href: links.adcombat },
   },
 ];
 
-export const gallery = [
-  { src: '/images/2aaa70e1-c6c5-49e2-975b-549f2a67f9b4.jpg', alt: 'Borbe na strunjači' },
-  { src: '/images/84cb54c2-3d09-4cc6-91da-2a8f653a9283.jpg', alt: 'Pobjedničko postolje' },
-  { src: '/images/808f0f99-89b3-48c6-8aab-74f17e90a8bd.jpg', alt: 'Osvojene medalje' },
-  { src: '/images/6172bd54-196f-4cb0-80c5-e27b46db4a07.jpg', alt: 'Tim ADCC Croatia' },
-  { src: '/images/0b23dbe9-0765-421c-b711-949f1671077b.jpg', alt: 'Natjecatelji u akciji' },
-  { src: '/images/369acc18-7972-4e7b-8f4b-246cd257281b.jpg', alt: 'Submission grappling meč' },
-  { src: '/images/92821a95-a25b-49be-846a-45c2861c82a5.jpg', alt: 'Trenutak s turnira' },
-  { src: '/images/c7746ace-cc1b-404a-9927-8b51b18466b6.jpg', alt: 'Borci ADCC Zadar Open' },
+export type GalleryItem = {
+  src: string;
+  alt: string;
+  position?: string;
+};
+
+export const gallery: GalleryItem[] = [
+  {
+    src: '/images/2aaa70e1-c6c5-49e2-975b-549f2a67f9b4.jpg',
+    alt: 'Nika Šalina — 1. mjesto na Europskom prvenstvu',
+    position: 'center 15%',
+  },
+  {
+    src: '/images/84cb54c2-3d09-4cc6-91da-2a8f653a9283.jpg',
+    alt: 'Zlatno odličje i diploma na Europskom prvenstvu',
+    position: 'center 15%',
+  },
+  {
+    src: '/images/808f0f99-89b3-48c6-8aab-74f17e90a8bd.jpg',
+    alt: 'Srebrno odličje — Europsko prvenstvo',
+    position: 'center 15%',
+  },
+  {
+    src: '/images/luka-vuksan-award-stage.jpg',
+    alt: 'Luka Vuksan — preuzimanje nagrade Ponos Zadra',
+    position: 'center 20%',
+  },
+  {
+    src: '/images/6172bd54-196f-4cb0-80c5-e27b46db4a07.jpg',
+    alt: 'Tim i reprezentacija ADCC Croatia',
+    position: 'center 28%',
+  },
+  {
+    src: '/images/369acc18-7972-4e7b-8f4b-246cd257281b.jpg',
+    alt: 'Zadar Youth Open 2026 medalje',
+    position: 'center 60%',
+  },
+  {
+    src: '/images/92821a95-a25b-49be-846a-45c2861c82a5.jpg',
+    alt: 'Jiu Jitsu Summer Camp Zadar — mladi borci',
+    position: 'center 35%',
+  },
+  {
+    src: '/images/e486d98b-5386-4643-b1c8-3f628a6573b0.jpg',
+    alt: 'Službene ADCC medalje',
+    position: 'center 45%',
+  },
 ];
 
 export const affiliates = [
