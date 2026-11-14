@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1440, initial-scale=1.0">
+  <title>ADCC Croatia – Natjecanja & Pravila</title>
+  <link rel="stylesheet" href="tweaks.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-family);
+      line-height: 1.5;
+      width: 1440px;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 64px;
+      background: rgba(10, 12, 16, 0.95);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .brand { display: flex; align-items: center; gap: 16px; }
+    .brand-badge {
+      background: var(--primary-color);
+      color: #fff;
+      font-weight: 900;
+      font-size: 20px;
+      letter-spacing: 2px;
+      padding: 8px 16px;
+      border-radius: 6px;
+    }
+    .brand-title { font-size: 20px; font-weight: 800; letter-spacing: 1px; }
+
+    .page-hero {
+      padding: 80px 64px 60px;
+      background: linear-gradient(180deg, #131722 0%, var(--bg-dark) 100%);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .page-tag {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--primary-color);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+    .page-title {
+      font-size: 48px;
+      font-weight: 900;
+      margin-bottom: 16px;
+    }
+    .page-sub {
+      font-size: 18px;
+      color: var(--text-muted);
+      max-width: 640px;
+    }
+
+    .content-section {
+      padding: 80px 64px;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+    }
+    .rule-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 32px;
+    }
+    .rule-title {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .rule-point {
+      margin-bottom: 16px;
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .rule-point strong { color: #fff; }
+
+    .division-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 24px;
+    }
+    .division-table th, .division-table td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--border-subtle);
+      font-size: 14px;
+    }
+    .division-table th {
+      background: rgba(255,255,255,0.03);
+      color: var(--primary-color);
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .footer {
+      background: #06080b;
+      border-top: 1px solid var(--border-subtle);
+      padding: 40px 64px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header" data-dc-id="ev-header">
+    <div class="brand" data-dc-id="ev-brand">
+      <div class="brand-badge" data-dc-id="ev-brand-badge">ADCC</div>
+      <div class="brand-title" data-dc-id="ev-brand-title">CROATIA</div>
+    </div>
+    <div style="font-weight: 700; font-size: 14px;">
+      <a href="desktop-home.html" style="margin-right: 24px;">← Povratak na Početnu</a>
+      <a href="https://smoothcomp.com" target="_blank" style="background: var(--primary-color); color: #fff; padding: 8px 18px; border-radius: 6px;">Smoothcomp</a>
+    </div>
+  </header>
+
+  <div class="page-hero" data-dc-id="ev-hero">
+    <div class="page-tag" data-dc-id="ev-hero-tag">Službeni Propisi & Informacije</div>
+    <h1 class="page-title" data-dc-id="ev-hero-title">ADCC PRAVILA, DIVIZIJE & BODOVANJE</h1>
+    <p class="page-sub" data-dc-id="ev-hero-sub">Najviši standardi sigurnosti, fer-pleja i tehničke preciznosti u svijetu submission grapplinga.</p>
+  </div>
+
+  <section class="content-section" data-dc-id="ev-rules-section">
+    <div class="grid-2">
+      <div class="rule-card" data-dc-id="ev-rule-card-1">
+        <div class="rule-title" data-dc-id="ev-rule-title-1">⏱️ Format Meča & Bodovanje</div>
+        <p class="rule-point" data-dc-id="ev-rule-pt-1"><strong>Prvi dio meča:</strong> Prva polovica meča odvija se bez bodova (samo submisije). Borci mogu slobodno napadati bez straha od negativnih bodova za guard pull ili rušenja.</p>
+        <p class="rule-point" data-dc-id="ev-rule-pt-2"><strong>Drugi dio meča:</strong> Uključuje se bodovanje (Takedown: 2-4 boda, Guard Pass: 3 boda, Mount/Back Mount: 4 boda, Knee on Belly: 2 boda).</p>
+        <p class="rule-point" data-dc-id="ev-rule-pt-3"><strong>Kazne (Penali):</strong> Pasivnost, izbjegavanje borbe ili povlačenje u guard u bodovanom dijelu meča kažnjava se negativnim bodom (-1).</p>
+      </div>
+
+      <div class="rule-card" data-dc-id="ev-rule-card-2">
+        <div class="rule-title" data-dc-id="ev-rule-title-2">⚖️ Službene Težinske Kategorije (Muški Pro)</div>
+        <p class="rule-point">Sva službena vaganja obavljaju se neposredno prije prvog meča bez kimona (No-Gi oprema).</p>
+        <table class="division-table" data-dc-id="ev-div-table">
+          <thead>
+            <tr>
+              <th>Kategorija</th>
+              <th>Težina (Limit)</th>
+              <th>Format Borbe</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>-66 kg</td><td>do 65.9 kg</td><td>6 min (3 min no points)</td></tr>
+            <tr><td>-77 kg</td><td>do 76.9 kg</td><td>6 min (3 min no points)</td></tr>
+            <tr><td>-88 kg</td><td>do 87.9 kg</td><td>6 min (3 min no points)</td></tr>
+            <tr><td>-99 kg</td><td>do 98.9 kg</td><td>6 min (3 min no points)</td></tr>
+            <tr><td>+99 kg</td><td>preko 99.0 kg</td><td>6 min (3 min no points)</td></tr>
+            <tr><td>Absolute</td><td>Otvorena kategorija</td><td>8 min (4 min no points)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" data-dc-id="ev-footer">
+    <div>© 2026 ADCC Croatia • Hrvatski Savez Submission Fightinga</div>
+    <div>Službeni partner: <strong>Schetka Studio</strong></div>
+  </footer>
+
+</body>
+</html>

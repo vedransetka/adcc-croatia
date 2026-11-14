@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "title": "ADCC Croatia Official Website",
+  "kind": "prototype",
+  "description": "Official website for ADCC Croatia (Croatian Submission Fighting) developed by Schetka Studio, featuring tournament registrations, Luka Vuksan World Champion tribute, photo archives, and international federation integrations.",
+  "artboards": [
+    {
+      "id": "desktop-home",
+      "title": "Desktop Home (1440px)",
+      "file": "desktop-home.html",
+      "width": 1440,
+      "group": "Homepage"
+    },
+    {
+      "id": "mobile-home",
+      "title": "Mobile Home (390px)",
+      "file": "mobile-home.html",
+      "width": 390,
+      "group": "Homepage"
+    },
+    {
+      "id": "desktop-events",
+      "title": "Events & Hall of Fame (1440px)",
+      "file": "desktop-events.html",
+      "width": 1440,
+      "group": "Events"
+    }
+  ],
+  "tweaks": [
+    {
+      "id": "primary-color",
+      "label": "Primary Brand Color",
+      "var": "--primary-color",
+      "type": "color",
+      "default": "#e10600"
+    },
+    {
+      "id": "accent-gold",
+      "label": "Champion Gold Accent",
+      "var": "--accent-gold",
+      "type": "color",
+      "default": "#f59e0b"
+    },
+    {
+      "id": "bg-dark",
+      "label": "Dark Background",
+      "var": "--bg-dark",
+      "type": "color",
+      "default": "#0a0c10"
+    },
+    {
+      "id": "bg-card",
+      "label": "Card Background",
+      "var": "--bg-card",
+      "type": "color",
+      "default": "#131722"
+    }
+  ]
+}

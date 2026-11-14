@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=390, initial-scale=1.0">
+  <title>ADCC Croatia (Mobile)</title>
+  <link rel="stylesheet" href="tweaks.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-family);
+      line-height: 1.5;
+      width: 390px;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    /* Header */
+    .m-header {
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(10, 12, 16, 0.98);
+      border-bottom: 1px solid var(--border-subtle);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .m-brand-badge {
+      background: var(--primary-color);
+      color: #fff;
+      font-weight: 900;
+      font-size: 14px;
+      padding: 6px 12px;
+      border-radius: 4px;
+      letter-spacing: 1px;
+    }
+    .m-brand-name {
+      font-weight: 800;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+    }
+    .m-menu-btn {
+      background: none;
+      border: 1px solid var(--border-subtle);
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    /* Hero */
+    .m-hero {
+      padding: 40px 20px 32px;
+      background: linear-gradient(180deg, rgba(19,23,34,0.7) 0%, rgba(10,12,16,1) 100%);
+    }
+    .m-hero-badge {
+      display: inline-block;
+      padding: 4px 10px;
+      background: rgba(225, 6, 0, 0.2);
+      border: 1px solid rgba(225, 6, 0, 0.4);
+      color: #ff4d4d;
+      font-size: 11px;
+      font-weight: 700;
+      border-radius: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+    .m-hero-h1 {
+      font-size: 34px;
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .m-hero-h1 span { color: var(--primary-color); }
+    .m-hero-desc {
+      font-size: 15px;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+    .m-btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 14px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+    .m-btn-primary {
+      background: var(--primary-color);
+      color: #fff;
+    }
+    .m-btn-secondary {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border-subtle);
+      color: #fff;
+    }
+
+    /* Champion Card */
+    .m-section {
+      padding: 36px 20px;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .m-tag {
+      font-size: 11px;
+      color: var(--accent-gold);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 8px;
+    }
+    .m-h2 {
+      font-size: 24px;
+      font-weight: 900;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+    .m-champ-card {
+      background: var(--bg-card);
+      border: 1px solid var(--accent-gold);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-top: 16px;
+    }
+    .m-champ-img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      display: block;
+    }
+    .m-champ-body {
+      padding: 20px;
+    }
+    .m-champ-title {
+      font-size: 18px;
+      font-weight: 900;
+      margin-bottom: 6px;
+    }
+    .m-champ-text {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    /* Events */
+    .m-event-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    .m-event-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+    .m-event-body {
+      padding: 16px;
+    }
+    .m-event-date {
+      color: var(--primary-color);
+      font-weight: 800;
+      font-size: 11px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .m-event-title {
+      font-size: 17px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .m-event-loc {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    /* Footer */
+    .m-footer {
+      background: #06080b;
+      padding: 32px 20px 24px;
+      border-top: 1px solid var(--border-subtle);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    .m-footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 20px 0;
+      font-weight: 600;
+    }
+    .m-schetka-credit {
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border-subtle);
+      text-align: center;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="m-header" data-dc-id="m-header">
+    <div style="display: flex; align-items: center; gap: 10px;" data-dc-id="m-brand">
+      <div class="m-brand-badge" data-dc-id="m-brand-badge">ADCC</div>
+      <div class="m-brand-name" data-dc-id="m-brand-name">CROATIA</div>
+    </div>
+    <button class="m-menu-btn" data-dc-id="m-menu-btn">IZBORNIK</button>
+  </header>
+
+  <section class="m-hero" data-dc-id="m-hero">
+    <div class="m-hero-badge" data-dc-id="m-hero-tag">Službeni Nacionalni Savez</div>
+    <h1 class="m-hero-h1" data-dc-id="m-hero-heading">VRHUNAC HRVATSKOG <span>SUBMISSION</span> FIGHTINGA</h1>
+    <p class="m-hero-desc" data-dc-id="m-hero-sub">Najprestižnija grappling organizacija u Hrvatskoj. Prijavite se na turnire i pratite rezultate naših boraca.</p>
+    <a href="#m-events" class="m-btn m-btn-primary" data-dc-id="m-btn-events">Turniri 2026</a>
+    <a href="https://smoothcomp.com" target="_blank" class="m-btn m-btn-secondary" data-dc-id="m-btn-smoothcomp">Smoothcomp Portal ↗</a>
+  </section>
+
+  <!-- Champion Spotlight -->
+  <section class="m-section" style="background: #0e121a;" data-dc-id="m-champion-section">
+    <div class="m-tag" data-dc-id="m-champ-tag">Svjetski Uspjeh</div>
+    <h2 class="m-h2" data-dc-id="m-champ-heading">LUKA VUKSAN: SVJETSKI PRVAK</h2>
+    <div class="m-champ-card" data-dc-id="m-champ-card">
+      <img src="assets/luka-vuksan.jpg" class="m-champ-img" alt="Luka Vuksan" data-dc-id="m-champ-img">
+      <div class="m-champ-body">
+        <div class="m-champ-title" data-dc-id="m-champ-name">🥇 Zlato na SP u Bangkoku</div>
+        <div class="m-champ-text" data-dc-id="m-champ-text">Proglašen najboljim sportašem Zadarske županije nakon povijesnog osvajanja svjetskog naslova u jiu-jitsuu pod okriljem HOO-a.</div>
+        <a href="https://www.hoo.hr/post/etiru-odlija-jiujitsu-boraca-na-spu-u-bankoku-luka-vuksan-svjetski-prvak" target="_blank" style="color: var(--accent-gold); font-size: 13px; font-weight: 700;" data-dc-id="m-champ-link">Pročitaj objavu HOO-a ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events -->
+  <section id="m-events" class="m-section" data-dc-id="m-events-section">
+    <div class="m-tag" style="color: var(--primary-color);" data-dc-id="m-events-tag">Kalendar</div>
+    <h2 class="m-h2" data-dc-id="m-events-heading">NADOLAZEĆI TURNIRI</h2>
+
+    <div class="m-event-card" data-dc-id="m-event-1">
+      <img src="assets/b3893ab6-0bc2-47ae-b481-7784d96a6441.jpg" class="m-event-img" alt="Zadar Open">
+      <div class="m-event-body">
+        <div class="m-event-date">Proljeće 2026 • Zadar</div>
+        <div class="m-event-title">ADCC Zadar Open 2026</div>
+        <div class="m-event-loc">Dvorana Krešimir Ćosić, Višnjik</div>
+        <a href="https://smoothcomp.com" target="_blank" style="color: #fff; font-weight: 800; font-size: 13px; border-bottom: 2px solid var(--primary-color); padding-bottom: 2px;">Prijava na Smoothcomp ↗</a>
+      </div>
+    </div>
+
+    <div class="m-event-card" data-dc-id="m-event-2">
+      <img src="assets/e486d98b-5386-4643-b1c8-3f628a6573b0.jpg" class="m-event-img" alt="Prvenstvo Hrvatske">
+      <div class="m-event-body">
+        <div class="m-event-date">Jesen 2026 • Zagreb</div>
+        <div class="m-event-title">ADCC Prvenstvo Hrvatske</div>
+        <div class="m-event-loc">Dom Sportova, Zagreb</div>
+        <a href="https://smoothcomp.com" target="_blank" style="color: #fff; font-weight: 800; font-size: 13px; border-bottom: 2px solid var(--primary-color); padding-bottom: 2px;">Detalji & Kategorije ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="m-footer" data-dc-id="m-footer">
+    <div style="font-weight: 800; font-size: 16px; color: #fff; margin-bottom: 8px;">ADCC CROATIA</div>
+    <p>Hrvatski savez submission fightinga • Voditelj: Damir Šalina</p>
+    <div class="m-footer-links" data-dc-id="m-footer-links">
+      <a href="https://adcombat.com" target="_blank">🌐 ADCombat.com</a>
+      <a href="https://smoothcomp.com" target="_blank">🥋 Smoothcomp</a>
+      <a href="https://rolljiujitsu.pixieset.com/adcczadar2026/" target="_blank">📸 Foto Galerija Zadar</a>
+      <a href="https://www.facebook.com/adcccroatia" target="_blank">📱 Facebook Stranica</a>
+    </div>
+    <div class="m-schetka-credit" data-dc-id="m-credit">
+      © 2026 ADCC Croatia • Designed by <strong>Šetka Studio</strong>
+    </div>
+  </footer>
+
+</body>
+</html>
