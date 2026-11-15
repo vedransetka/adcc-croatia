@@ -10,19 +10,13 @@ const year = 2026;
       <div class="footer-col">
         <div class="brand">
           <img
-            src="/images/adcc-croatia-crest.jpg"
-            alt="ADCC Croatia Emblem"
-            class="brand-crest"
-            width="42"
-            height="42"
-          />
-          <img
-            src="/images/adcc-retina-logo.png"
-            alt="ADCC Submission Fighting World Federation"
+            src="/images/adcc-croatia-logo-official.png"
+            alt="ADCC Croatian Submission Fighting Organization"
             class="brand-logo"
-            width="100"
-            height="46"
+            width="82"
+            height="53"
           />
+          <span class="brand-divider" aria-hidden="true"></span>
           <span class="brand-title">CROATIA</span>
         </div>
         <p class="footer-about">
@@ -90,21 +84,17 @@ const year = 2026;
     gap: 14px;
     margin-bottom: 16px;
   }
-  .brand-crest {
-    height: 42px;
-    width: 42px;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-    border: 1px solid rgba(225, 6, 0, 0.4);
-    box-shadow: 0 0 10px rgba(225, 6, 0, 0.3);
-  }
   .brand-logo {
-    height: 42px;
+    height: 44px;
     width: auto;
     object-fit: contain;
     display: block;
     filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
+  }
+  .brand-divider {
+    width: 1px;
+    height: 32px;
+    background: var(--border-subtle);
   }
   .brand-title {
     font-family: var(--font-display);
