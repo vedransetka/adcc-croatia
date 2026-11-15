@@ -5,26 +5,37 @@ import { heroStats, links } from '../data/site';
 <section class="hero" id="about">
   <div class="container hero-grid">
     <div class="hero-content">
-      <span class="hero-badge">Službeni Nacionalni Savez</span>
+      <span class="hero-badge">
+        <img
+          src="/images/adcc-croatia-crest.jpg"
+          alt=""
+          class="hero-badge-crest"
+          width="20"
+          height="20"
+        />
+        ADCC Croatian Submission Fighting Organization
+      </span>
       <h1 class="hero-h1">
         VRHUNAC HRVATSKOG <span>SUBMISSION</span> FIGHTINGA
       </h1>
       <p class="hero-desc">
         Službeno predstavništvo najprestižnije svjetske grappling organizacije u
-        Hrvatskoj. Organiziramo nacionalna prvenstva, otvorene kupove i pripremamo
-        borce za međunarodnu ADCC scenu.
+        Hrvatskoj. Vodimo borce putem prema ADCC svjetskoj sceni, organiziramo
+        nacionalna prvenstva i otvorene kupove po strogim službenim standardima.
       </p>
       <div class="hero-buttons">
-        <a href="/#tournaments" class="btn-primary">Pregledaj Turnire 2026</a>
-        <a href="/pravila" class="btn-secondary">ADCC Pravila &amp; Kriteriji</a>
+        <a href={links.smoothcomp} target="_blank" rel="noopener" class="btn-primary">
+          ADCC Croatia Open 2026 Prijava ↗
+        </a>
+        <a href="/#tournaments" class="btn-secondary">Pregledaj Turnire</a>
       </div>
     </div>
 
     <div class="hero-visual">
       <div class="hero-card">
         <img
-          src="/images/5db9902a-14d2-4a24-b62f-5de7a5d9116e.jpg"
-          alt="ADCC Croatia prvenstvo — borci na strunjači"
+          src="/images/fb-hero-arena.jpg"
+          alt="ADCC Croatia — Dvorana Krešimir Ćosić, ŠC Višnjik Zadar"
           class="hero-img"
           width="620"
           height="380"
@@ -60,7 +71,7 @@ import { heroStats, links } from '../data/site';
   .hero-badge {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     padding: 6px 16px;
     background: rgba(225, 6, 0, 0.12);
     border: 1px solid rgba(225, 6, 0, 0.4);
@@ -69,8 +80,15 @@ import { heroStats, links } from '../data/site';
     font-weight: 800;
     border-radius: 20px;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     margin-bottom: 24px;
+  }
+  .hero-badge-crest {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 8px rgba(225, 6, 0, 0.4);
   }
   .hero-h1 {
     font-family: var(--font-display);

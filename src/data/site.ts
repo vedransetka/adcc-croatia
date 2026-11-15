@@ -5,7 +5,7 @@
 
 export const site = {
   name: 'ADCC Croatia',
-  legalName: 'Hrvatski Savez Submission Fightinga',
+  legalName: 'ADCC Croatian Submission Fighting Organization',
   domain: 'adcc-croatia.com',
   url: 'https://adcc-croatia.com',
   locale: 'hr_HR',
@@ -14,6 +14,8 @@ export const site = {
     'Službeno predstavništvo ADCC-a u Hrvatskoj — nacionalna prvenstva, otvoreni kupovi, ' +
     'pravila i divizije submission grapplinga te svjetski prvak Luka Vuksan.',
   manager: 'Damir Šalina',
+  phone: '+385 91 721 4737',
+  email: 'info@adcc-croatia.com',
   locations: 'Zadar / Zagreb, Hrvatska',
 } as const;
 
@@ -27,7 +29,8 @@ export const nav = [
 
 export const links = {
   adcombat: 'https://adcombat.com/',
-  smoothcomp: 'https://smoothcomp.com/',
+  smoothcomp: 'https://smoothcomp.com/en/event/31839',
+  smoothcompGlobal: 'https://smoothcomp.com/',
   facebook: 'https://www.facebook.com/adcccroatia',
   pixieset: 'https://rolljiujitsu.pixieset.com/adcczadar2026/',
   hoo: 'https://www.hoo.hr/post/etiru-odlija-jiujitsu-boraca-na-spu-u-bankoku-luka-vuksan-svjetski-prvak',
@@ -68,12 +71,12 @@ export type EventItem = {
 
 export const events: EventItem[] = [
   {
-    date: 'Proljeće 2026 • Zadar',
-    title: 'ADCC Zadar Open 2026',
+    date: '4. srpnja 2026. • Zadar',
+    title: 'ADCC Croatia Open 2026',
     location: 'ŠC Višnjik, Dvorana Krešimir Ćosić, Zadar',
-    image: '/images/b3893ab6-0bc2-47ae-b481-7784d96a6441.jpg',
+    image: '/images/adcc-croatia-open-2026-poster.jpg',
     position: 'center center',
-    cta: { label: 'Otvorene Prijave & Ždrijeb', href: links.smoothcomp },
+    cta: { label: 'Smoothcomp Prijava (Event 31839) ↗', href: links.smoothcomp },
   },
   {
     date: 'Jesen 2026 • Zagreb',
@@ -81,7 +84,7 @@ export const events: EventItem[] = [
     location: 'Dom Sportova, Zagreb',
     image: '/images/e486d98b-5386-4643-b1c8-3f628a6573b0.jpg',
     position: 'center 45%',
-    cta: { label: 'Službeni Detalji', href: links.smoothcomp },
+    cta: { label: 'Službeni Detalji', href: links.smoothcompGlobal },
   },
   {
     date: 'ADCC Europe & Middle East',

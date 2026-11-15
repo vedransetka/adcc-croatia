@@ -10,17 +10,23 @@ const year = 2026;
       <div class="footer-col">
         <div class="brand">
           <img
+            src="/images/adcc-croatia-crest.jpg"
+            alt="ADCC Croatia Emblem"
+            class="brand-crest"
+            width="42"
+            height="42"
+          />
+          <img
             src="/images/adcc-retina-logo.png"
             alt="ADCC Submission Fighting World Federation"
             class="brand-logo"
-            width="110"
-            height="51"
+            width="100"
+            height="46"
           />
           <span class="brand-title">CROATIA</span>
         </div>
         <p class="footer-about">
-          Hrvatski savez submission fightinga i službeni predstavnik ADCC
-          federacije. Posvećeni razvoju grappling sporta i natjecatelja u RH.
+          {site.legalName} — službeni predstavnik ADCC federacije u Hrvatskoj. Posvećeni razvoju grappling sporta i natjecatelja.
         </p>
       </div>
 
@@ -37,19 +43,21 @@ const year = 2026;
         <h4>Partneri</h4>
         <ul>
           <li><a href={links.adcombat} target="_blank" rel="noopener">ADCC Global</a></li>
-          <li><a href={links.smoothcomp} target="_blank" rel="noopener">Smoothcomp</a></li>
+          <li><a href={links.smoothcomp} target="_blank" rel="noopener">Smoothcomp Registracija</a></li>
           <li><a href="https://www.hoo.hr" target="_blank" rel="noopener">Hrvatski Olimpijski Odbor</a></li>
           <li><a href={links.pixieset} target="_blank" rel="noopener">Pixieset Galerija</a></li>
-          <li><a href={links.facebook} target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href={links.facebook} target="_blank" rel="noopener">Facebook @adcccroatia</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
         <h4>Kontakt</h4>
         <ul>
-          <li>Voditelj: {site.manager}</li>
+          <li>Voditelj: <strong>{site.manager}</strong></li>
+          <li>Tel: <a href={`tel:${site.phone.replace(/\s+/g, '')}`}>{site.phone}</a></li>
+          <li>Email: <a href={`mailto:${site.email}`}>{site.email}</a></li>
           <li>Lokacija: {site.locations}</li>
-          <li>Domena: {site.domain}</li>
+          <li><a href={links.facebook} target="_blank" rel="noopener">Facebook Stranica ↗</a></li>
         </ul>
       </div>
     </div>
@@ -81,6 +89,15 @@ const year = 2026;
     align-items: center;
     gap: 14px;
     margin-bottom: 16px;
+  }
+  .brand-crest {
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    border: 1px solid rgba(225, 6, 0, 0.4);
+    box-shadow: 0 0 10px rgba(225, 6, 0, 0.3);
   }
   .brand-logo {
     height: 42px;
