@@ -76,7 +76,7 @@ export const events: EventItem[] = [
     location: 'ŠC Višnjik, Dvorana Krešimir Ćosić, Zadar',
     image: '/images/adcc-croatia-open-2026-poster.jpg',
     position: 'center center',
-    cta: { label: 'Smoothcomp Prijava (Event 31839) ↗', href: links.smoothcomp },
+    cta: { label: 'Smoothcomp Ždrijeb & Rezultati ↗', href: links.smoothcomp },
   },
   {
     date: 'Jesen 2026 • Zagreb',
