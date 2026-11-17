@@ -12,7 +12,7 @@ export const site = {
   lang: 'hr',
   description:
     'Službeno predstavništvo ADCC-a u Hrvatskoj — nacionalna prvenstva, otvoreni kupovi, ' +
-    'pravila i divizije submission grapplinga te svjetski prvak Luka Vuksan.',
+    'pravila i divizije submission grapplinga.',
   manager: 'Damir Šalina',
   phone: '+385 91 721 4737',
   email: 'info@adcc-croatia.com',
@@ -21,7 +21,6 @@ export const site = {
 
 export const nav = [
   { label: 'O Savezu', href: '/#about' },
-  { label: 'Svjetski Prvak', href: '/#champion' },
   { label: 'Natjecanja', href: '/#tournaments' },
   { label: 'Pravila', href: '/pravila' },
   { label: 'Galerija', href: '/#gallery' },
@@ -33,32 +32,14 @@ export const links = {
   smoothcompGlobal: 'https://smoothcomp.com/',
   facebook: 'https://www.facebook.com/adcccroatia',
   pixieset: 'https://rolljiujitsu.pixieset.com/adcczadar2026/',
-  hoo: 'https://www.hoo.hr/post/etiru-odlija-jiujitsu-boraca-na-spu-u-bankoku-luka-vuksan-svjetski-prvak',
-  zupanija:
-    'https://www.zadarska-zupanija.hr/novosti-arhiva/item/3778-ponos-zadra-dodijeljene-nagrade-najboljim-sportasima-zadarske-zupanije-za-2025-godinu',
   schetka: 'https://schetka.studio',
 } as const;
 
 export const heroStats = [
   { num: '20+', label: 'Godina Tradicije' },
   { num: '500+', label: 'Registriranih Boraca' },
-  { num: '1', label: 'Svjetski Prvak' },
+  { num: '100%', label: 'ADCC Pravila & Kriteriji' },
 ] as const;
-
-export const champion = {
-  name: 'Luka Vuksan',
-  photo: '/images/luka-vuksan.jpg',
-  awards: [
-    {
-      title: '🥇 Zlato na SP Bangkok',
-      desc: 'Svjetski prvak u jiu-jitsu borbama pod okriljem Hrvatskog olimpijskog odbora.',
-    },
-    {
-      title: '🏆 Najbolji Sportaš Županije',
-      desc: 'Godišnja nagrada Zadarske županije za vrhunska sportska dostignuća u 2025.',
-    },
-  ],
-} as const;
 
 export type EventItem = {
   date: string;
@@ -90,8 +71,8 @@ export const events: EventItem[] = [
     date: 'ADCC Europe & Middle East',
     title: 'ADCC European Trials',
     location: 'Kvalifikacije za Svjetsko Prvenstvo',
-    image: '/images/1bd918d6-26ec-45a8-91bb-0867c27d6647.jpg',
-    position: 'center 15%',
+    image: '/images/b3893ab6-0bc2-47ae-b481-7784d96a6441.jpg',
+    position: 'center 60%',
     cta: { label: 'Pravila & Kriteriji', href: links.adcombat },
   },
 ];
@@ -104,29 +85,14 @@ export type GalleryItem = {
 
 export const gallery: GalleryItem[] = [
   {
-    src: '/images/2aaa70e1-c6c5-49e2-975b-549f2a67f9b4.jpg',
-    alt: 'Nika Šalina — 1. mjesto na Europskom prvenstvu',
-    position: 'center 15%',
+    src: '/images/e486d98b-5386-4643-b1c8-3f628a6573b0.jpg',
+    alt: 'Službene ADCC medalje',
+    position: 'center 45%',
   },
   {
-    src: '/images/84cb54c2-3d09-4cc6-91da-2a8f653a9283.jpg',
-    alt: 'Zlatno odličje i diploma na Europskom prvenstvu',
-    position: 'center 15%',
-  },
-  {
-    src: '/images/808f0f99-89b3-48c6-8aab-74f17e90a8bd.jpg',
-    alt: 'Srebrno odličje — Europsko prvenstvo',
-    position: 'center 15%',
-  },
-  {
-    src: '/images/luka-vuksan-award-stage.jpg',
-    alt: 'Luka Vuksan — preuzimanje nagrade Ponos Zadra',
-    position: 'center 20%',
-  },
-  {
-    src: '/images/6172bd54-196f-4cb0-80c5-e27b46db4a07.jpg',
-    alt: 'Tim i reprezentacija ADCC Croatia',
-    position: 'center 28%',
+    src: '/images/b3893ab6-0bc2-47ae-b481-7784d96a6441.jpg',
+    alt: 'Natjecateljska arena — strunjače spremne za borbe',
+    position: 'center 60%',
   },
   {
     src: '/images/369acc18-7972-4e7b-8f4b-246cd257281b.jpg',
@@ -135,13 +101,8 @@ export const gallery: GalleryItem[] = [
   },
   {
     src: '/images/92821a95-a25b-49be-846a-45c2861c82a5.jpg',
-    alt: 'Jiu Jitsu Summer Camp Zadar — mladi borci',
+    alt: 'Summer Camp Zadar — mladi borci na strunjači',
     position: 'center 35%',
-  },
-  {
-    src: '/images/e486d98b-5386-4643-b1c8-3f628a6573b0.jpg',
-    alt: 'Službene ADCC medalje',
-    position: 'center 45%',
   },
 ];
 
